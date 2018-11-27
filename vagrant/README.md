@@ -17,6 +17,15 @@ The report contains the following information about the blog:
 3. Days With Connection Issues
     * This lists all of the days in which more than 1% of requests to the server resulted in errors, i.e. those with the status "404 NOT FOUND".
 
+##How Does it Work?
+When run as a stand-alone script, this application creates a dictionary that contains the headers for each of the queries that are going to be run as keys, and the actual SQL queries to be made as values. This is done with the `name_queries` and `create_queries` functions. 
+
+Then, the `report_logs` function is called, which runs the queries and prints the report. To do this, `report_logs` uses the `run_SELECT_query` for each of the queries that are passed to it from the dictionary `query_dict` that is returned from the `create_queries` function. 
+
+The function `run_SELECT_query` establishes a connection to the `news` database, saves the result, and then closes the connection to the database before returning the query result. 
+
+The query results each have two columns, which are converted to elements in a list. The `report_logs` function prints these out, generating the report.
+
 ##Installation and Dependencies
 The application uses Python 3.5.2. Make sure that you have this or a later version installed.
 
