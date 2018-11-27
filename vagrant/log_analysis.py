@@ -82,8 +82,8 @@ def create_queries(query_names):
         ORDER BY de.day;
         """)
 
-    query_results = dict(zip(query_names, queries))
-    return query_results
+    query_dict = dict(zip(query_names, queries))
+    return query_dict
 
 
 if __name__ == "__main__":
