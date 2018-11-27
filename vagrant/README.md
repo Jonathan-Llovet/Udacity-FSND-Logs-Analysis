@@ -53,9 +53,7 @@ Once it is installed, you will need to create the following Views in your databa
 ## Usage
 To generate a report, simply run `python3 log_analysis.py` in the directory containing the script. Otherwise, provide the path to the file. 
 
-To save the report as a text file, use the `>` command as in the example below:
-    python3 log_analysis.py > log_analysis_output.txt
-This will save the output into a .txt file.
+To save the report as a text file, use the `>` command like so, `python3 log_analysis.py > log_analysis_output.txt` This will save the output into a .txt file.
 
 ## License
 This project is licensed under the terms of the MIT license.
